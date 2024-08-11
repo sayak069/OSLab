@@ -1,0 +1,10 @@
+Let us consider several students write a shell program of GCD of two number i.e.gcd(a,b) using command line arguments. All the programs are stored in directory. You have to check which programs are correct and which are not. You have to prepare a list of test cases and stored it in a file. Execute each program one by one and check which one passes all test cases and which are not passes all test cases. 
+
+Test cases format is:
+    a b Output
+    -----------
+    2 5 1
+    0 3 0
+    5 0 Not possible
+    abc 5 Not possible
+    abc xyz Not possible
