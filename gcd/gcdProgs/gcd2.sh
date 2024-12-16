@@ -5,7 +5,10 @@ gcd(){
     then
         if [ $x -eq 0 ]
         then
-            echo "$x"
+            echo "0"
+        elif [ $y -eq 0 ]
+        then
+            echo "0"
         else
             gcd `expr $y % $x ` $x
         fi
