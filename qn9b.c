@@ -5,7 +5,7 @@
 #include<sys/wait.h>    
 #include<stdlib.h>  
 int main() {
-	int fd[2];
+	int fd[2],nbytes;
 	pid_t childpid;
 	char string[80];
 	char readbuffer[80];
@@ -19,10 +19,10 @@ int main() {
 		exit(1);
 	}
 	else if(childpid==0) {
-		printf("inside child");
 		close(fd[1]);
-		
-		if (read(fd[0],readbuffer,sizeof(readbuffer)) == -1) {
+		nbytes=read(fd[0],readbuffer,sizeof(readbuffer));
+		printf("inside child");
+		if (nbytes == -1) {
             printf("Read failed");
             exit(1);
         }
